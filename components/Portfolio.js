@@ -19,6 +19,7 @@ import {SiRubyonrails, SiReact, SiFramer, SiJquery, SiNodedotjs,
         SiMongodb, SiPostgresql, SiPrisma, SiTrello} from 'react-icons/si'
 
 import Link from 'next/link'
+import {IoIosArrowDown} from 'react-icons/io'
 
 const Portfolio = ({scrollDown, scrollUp}) => {
 
@@ -32,8 +33,12 @@ const Portfolio = ({scrollDown, scrollUp}) => {
 
 
   return (
-    <motion.div>
-     <button onClick={() => scrollUp()}>Scroll Up</button>
+    <motion.div className='h-screen bg-purple-400'>
+      <div className='border flex justify-center h-24'>
+      <motion.button onClick={() => scrollUp()}>
+          <IoIosArrowDown className='ml-auto mr-auto mt-16 text-xl md:text-2xl lg:text-4xl text-zinc-800' style = {{transform: 'rotate(180deg)' }}/>
+      </motion.button>  
+      </div>
       <motion.h1 className='text-end w-5/6 underline' initial = {{opacity: 0}} whileInView = {{scale: 1.1, opacity: 1}} transition = {{duration: 1}}>Portfolio</motion.h1>
         <Slider {...settings} id='slider' className='max-h-fit w-1/2 ml-auto mr-auto'>
             <motion.div className='flex justify-center' id='slide'>
@@ -111,8 +116,12 @@ const Portfolio = ({scrollDown, scrollUp}) => {
               <SiMongodb size={30}/> <SiPostgresql size={30}/> <SiPrisma size={30}/> <SiTrello size={30}/>
             </motion.div>
           </motion.div>
-      <button onClick={() => scrollDown()}>Scroll Down</button>
-    </motion.div>
+          <div className='border flex justify-center'>
+          <motion.button onClick={() => scrollDown()}>
+          <IoIosArrowDown className='text-xl md:text-2xl lg:text-4xl text-zinc-800'/>
+        </motion.button>   
+        </div> 
+        </motion.div>
   )
 }
 

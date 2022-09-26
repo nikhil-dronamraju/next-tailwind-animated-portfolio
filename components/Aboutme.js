@@ -17,8 +17,8 @@ const Aboutme = ({scrollUp, scrollDown}) => {
       </motion.button>        
         <h4 className='text-end ml-auto mr-auto w-3/4 pb-5 text-2xl md:text-4xl text-zinc-600 underline'>About Me</h4>
          <div className='bg-zinc-200 w-5/6 ml-auto mr-auto border border-zinc-500 shadow-2xl inline-flex justify-around'>
-            <Image className='border w-1/2 h-1/2 lg:w-1/4 lg:h-1/4' src={myPic} alt='cartoon Nikhil Dronamraju'/>
-            <div className='w-3/5 ml-auto mr-auto text-[7.5px] ali md:text-[16px] lg:text-[16px]'>
+            <Image className='border w-1/2 h-1/2 lg:w-1/3 lg:h-1/3' src={myPic} alt='cartoon Nikhil Dronamraju'/>
+            <div className='w-3/5 ml-auto mr-auto text-[7px] ali md:text-[13px] lg:text-[16px]'>
                 My name is Nikhil Dronamraju. I'm currently a graduating Industrial Engineering major{'\n'}
                 at Texas A&M
                 University, and a front-end intern at their High Performance Research{'\n'}
@@ -31,7 +31,7 @@ const Aboutme = ({scrollUp, scrollDown}) => {
                 development, and made this site to showcase my portfolio.
               If you like what you see,{'\n'}
               please don't hesitate to reach out. Maybe we can create something together! 
-              <motion.div id='aboutmeiconscontainer' className='flex text-5xl justify-evenly md:mt-4' initial = {{opacity: 0}} whileInView = {{ opacity: 1}} transition = {{duration: 2, delay: 1}}>
+              <motion.div id='aboutmeiconscontainer' className='h-8 text-xl flex md:h-20 justify-evenly items-center sm:text-4xl md:text-5xl' initial = {{opacity: 0}} whileInView = {{ opacity: 1}} transition = {{duration: 2, delay: 1}}>
                 <Link href='https://www.youtube.com/channel/UCwDfN0ThzGiaQjV6pgKG-pQ' passHref={true}>
                   <motion.a whileHover={{opacity: 1, scale: 1.3}} whileTap = {{scale: 0.9}} id='aboutmelink'>
                     <AiFillYoutube id='icon'/>
