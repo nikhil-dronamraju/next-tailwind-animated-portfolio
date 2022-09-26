@@ -28,16 +28,16 @@ const Portfolio = ({scrollTop, scrollDown, scrollAbout, scrollPortfolio, scrollR
 
   return (
     <motion.div className='h-screen bg-sky-700'>
-        <Navbar color='white' scrollAbout={scrollAbout} scrollPortfolio={scrollPortfolio} scrollTop = {scrollTop} scrollResume={scrollResume}/>
+        <Navbar color='neutral-50' scrollAbout={scrollAbout} scrollPortfolio={scrollPortfolio} scrollTop = {scrollTop} scrollResume={scrollResume}/>
 
-        <motion.h1 initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='text-end w-5/6 text-1xl md:text-3xl lg:text-4xl underline text-slate-50 font-Shadows-Into-Light'>Portfolio</motion.h1>
+        <motion.h1 initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='text-end w-5/6 text-1xl md:text-3xl lg:text-4xl underline text-neutral-50 font-Shadows-Into-Light'>Portfolio</motion.h1>
 
         <Slider {...settings} id='slider' className='max-h-1/2 w-1/2 ml-auto mr-auto'>
             <motion.div className='flex justify-center' id='slide'>
-                <motion.h3 className='text-center underline text-slate-50 font-Shadows-Into-Light'>Supercomputing Dashboard</motion.h3>
+                <motion.h3 className='text-center md:text-lg lg:text-3xl underline text-neutral-50 font-Shadows-Into-Light'>Supercomputing Dashboard</motion.h3>
                 <Image src={dashboardPic} alt="Dashboard pic" className='ml-auto mr-auto'/>
                 <br/>
-                <motion.div id='slideicons' className='flex justify-around text-white'>
+                <motion.div id='slideicons' className='flex justify-around text-neutral-50'>
                 <Link href = "https://github.tamu.edu/HPRC/OOD-Dashboard/tree/testround" scroll={false} passHref={true}>
                     <motion.a whileHover={{scale: 1.1}} whileTap = {{scale: 0.9}} id='navLink'>                    
                     <AiFillGithub size={50}/>
@@ -49,34 +49,34 @@ const Portfolio = ({scrollTop, scrollDown, scrollAbout, scrollPortfolio, scrollR
             </motion.div>
 
             <motion.div id='slide'>
-                <motion.h3 className='text-center underline font-Shadows-Into-Light text-white' id='slidetitle'>HPRC Website</motion.h3>
+                <motion.h3 className='text-center md:text-lg lg:text-3xl underline text-neutral-50 font-Shadows-Into-Light'>HPRC Website</motion.h3>
                 <motion.div className='flex justify-center' id='slideimage'>
                 <Image src={hprcPortfolioPic} alt="Website pic" />
                 </motion.div>
                 <br/>
                 <motion.div id='slideiconsportfolio' className=' flex justify-center'>
-                <motion.div className='text-white font-Shadows-Into-Light'>Code made private under {'\n'}university research. {'\n'}Sorry about that!</motion.div>
+                <motion.div className='text-neutral-50 font-Shadows-Into-Light'>Code made private under {'\n'}university research. {'\n'}Sorry about that!</motion.div>
                 </motion.div>
             </motion.div>
 
             <motion.div id='slide'>
-            <motion.h3 className='text-center underline font-Shadows-Into-Light text-white' id='slidetitle'>12th Unmanned Team</motion.h3>
+            <motion.h3 className='text-center md:text-lg lg:text-3xl underline text-neutral-50 font-Shadows-Into-Light'>12th Unmanned Team</motion.h3>
                 <motion.div id='slideimage'>
                 <Image src={unmanned} alt="12th unmanned pic" />
                 </motion.div>
                 <br/>
                 <motion.div id='slideiconsportfolio' className=' flex justify-center'>
-                    <motion.div className='font-Shadows-Into-Light text-white'>Code made private under {'\n'}university research. {'\n'}Sorry about that!</motion.div>
+                    <motion.div className='font-Shadows-Into-Light text-neutral-50'>Code made private under {'\n'}university research. {'\n'}Sorry about that!</motion.div>
                 </motion.div>
             </motion.div>
 
             <motion.div id='slide'>
-            <motion.h3 className='text-center underline font-Shadows-Into-Light text-white' id='slidetitle'>Portfolio Site</motion.h3>
+            <motion.h3 className='text-center md:text-lg lg:text-3xl underline text-neutral-50 font-Shadows-Into-Light'>Portfolio Site</motion.h3>
                 <motion.div id='slideimage'>
                 <Image src={myPortfolio} alt="My portfolio pic" />
                 </motion.div>
                 <br/>
-                <motion.div id='slideiconsportfolio' className='flex justify-center text-white'>
+                <motion.div id='slideiconsportfolio' className='flex justify-center text-neutral-50'>
                 <Link href = "https://github.com/nikhil-dronamraju/nextjsportfolio" scroll={false} passHref={true}>
                     <motion.a whileHover={{scale: 1.1}} whileTap = {{scale: 0.9}} id='navLink'>                    
                     <AiFillGithub size={50}/>
@@ -86,19 +86,19 @@ const Portfolio = ({scrollTop, scrollDown, scrollAbout, scrollPortfolio, scrollR
             </motion.div>
             
             <motion.div id='slide'>
-            <motion.h3 className='text-center underline font-Shadows-Into-Light text-white' id='slidetitle'>Publication: Cybersecurity...</motion.h3>
+            <motion.h3 className='text-center md:text-lg lg:text-3xl underline text-neutral-50 font-Shadows-Into-Light'>Publication: Cybersecurity...</motion.h3>
                 <motion.div id='slideimage'>
-                <Image src={hprcPublication} alt="Publication pic" className=' -blue' />
+                <Image src={hprcPublication} alt="Publication pic"/>
                 </motion.div>
                 <br/>
-                <motion.div id='slideiconsportfolio' className='ml-auto mr-auto w-1/2 h-1/2 text-white font-Shadows-Into-Light'>
+                <motion.div id='slideiconsportfolio' className='ml-auto mr-auto w-1/2 h-1/2 text-neutral-50 font-Shadows-Into-Light'>
                 <motion.div>Currently being reviewed {'\n'}for BPHTE '22 Research Conference</motion.div>
                 </motion.div>
             </motion.div>
             </Slider>
             <div className='flex h-fit'>
                 <motion.button onClick={() => {scrollDown()}} className='inline-flex w-fit ml-auto mr-auto mt-16 lg:mt-6 text-xl md:text-2xl lg:text-4xl' whileHover={{scale:1.1}} whileTap={{scale:.9}}>
-                    <IoIosArrowDown color='white'/>     
+                    <IoIosArrowDown className='text-neutral-50'/>     
                 </motion.button>
             </div>
         </motion.div>
