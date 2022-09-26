@@ -18,7 +18,6 @@ import Navbar from './Navbar';
 const Portfolio = ({scrollTop, scrollDown, scrollAbout, scrollPortfolio, scrollResume}) => {
 
   const settings = {
-    dots: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1
@@ -96,11 +95,11 @@ const Portfolio = ({scrollTop, scrollDown, scrollAbout, scrollPortfolio, scrollR
                 </motion.div>
             </motion.div>
             </Slider>
-            <div className='flex h-fit'>
-                <motion.button onClick={() => {scrollDown()}} className='inline-flex w-fit ml-auto mr-auto mt-16 lg:mt-6 text-xl md:text-2xl lg:text-4xl' whileHover={{scale:1.1}} whileTap={{scale:.9}}>
-                    <IoIosArrowDown className='text-neutral-50'/>     
+            <motion.div initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='flex'>
+                <motion.button onClick={() => {scrollDown()}} className='inline-flex w-fit ml-auto mr-auto mt-16 md:mt-24 lg:mt-0 text-xl md:text-2xl lg:text-4xl' whileHover={{scale:1.1}} whileTap={{scale:.9}}>
+                    <IoIosArrowDown color='white'/>     
                 </motion.button>
-            </div>
+            </motion.div>
         </motion.div>
   )
 }

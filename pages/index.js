@@ -9,7 +9,7 @@ import Resume from '../components/Resume';
 const Fullpage = () => (
   <ReactFullpage
     //fullpage options
-    licenseKey = {'YOUR_KEY_HERE'}
+    licenseKey = {'KV86H-9Q6V7-5J267-841N9-DEUUR'}
     scrollingSpeed = {1000} /* Options here */
 
     render={({ state, fullpageApi }) => {

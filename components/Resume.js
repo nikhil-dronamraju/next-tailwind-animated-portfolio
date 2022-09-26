@@ -19,7 +19,7 @@ const Resume = ({scrollUp, scrollTop, scrollAbout, scrollPortfolio, scrollResume
         <Navbar color='white' scrollAbout={scrollAbout} scrollPortfolio={scrollPortfolio} scrollTop = {scrollTop} scrollResume={scrollResume}/>     
         <motion.h1 initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='text-end w-5/6 text-1xl md:text-3xl lg:text-4xl underline text-slate-50 font-Shadows-Into-Light'>Resume/CV</motion.h1>
         
-        <motion.div id='iconscontainer' className='text-white font-Shadows-Into-Light mt-10 flex'>
+        <motion.div id='iconscontainer' className='text-white font-Shadows-Into-Light mt-10 flex justify-evenly'>
 
             <motion.div className='inline-flex flex-col ml-8'>
             <motion.h2 className=' underline text-center text-xs md:text-2xl lg:text-2xl' initial = {{opacity: 0}} whileInView = {{opacity: 1}}>Tech Stack: </motion.h2>
@@ -32,13 +32,15 @@ const Resume = ({scrollUp, scrollTop, scrollAbout, scrollPortfolio, scrollResume
               <SiMongodb className='text-xs md:text-xl'/> <SiPostgresql className='text-xs md:text-xl'/> <SiPrisma className='text-xs md:text-xl'/> <SiTrello className='text-xs md:text-xl'/>
             </motion.div> 
             </motion.div>
+            <div className='inline-flex w-3/4'>
             <Image className='ml-auto mr-auto w-1/3 md:w-1/4' id='resumeImage' src= {resume} alt="NikhilResume"/>
+            </div>
         </motion.div>
-        <div className='flex'>
+        <motion.div className='flex' initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}}>
           <motion.button onClick={() => {scrollTop()}} className='inline-flex w-fit ml-auto mr-auto mt-16 md:mt-12 lg:mt-12 text-xl md:text-2xl lg:text-4xl' whileHover={{scale:1.1}} whileTap={{scale:.9}}>
             <IoIosArrowUp color='white'/>     
           </motion.button>
-    </div>
+        </motion.div>
 
     </motion.div>
     
