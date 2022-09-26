@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily:{
+      'Bilbo':['"Bilbo Swash Caps"', 'cursive'],
+      'Shadows-Into-Light':['"Shadows Into Light"', 'cursive']
+    }
   },
   plugins: [],
 }
