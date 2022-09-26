@@ -7,16 +7,12 @@ import {AiFillLinkedin} from 'react-icons/ai'
 import {motion} from 'framer-motion'
 import Link from 'next/link'
 import {IoIosArrowDown} from 'react-icons/io'
+import Navbar from './Navbar'
 
-const Aboutme = ({scrollUp, scrollDown}) => {
+const Aboutme = ({scrollTop, scrollAbout, scrollPortfolio, scrollResume}) => {
   return (
-    <div className='h-screen bg-sky-300'>
-      <motion.div className='flex'>
-          <motion.button onClick={() => {scrollUp()}} className='inline-flex ml-auto mr-auto w-fit text-xl md:text-2xl lg:text-4xl' whileHover={{scale:1.1}} whileTap={{scale:.9}}>
-              <IoIosArrowDown color='black' transform='rotate(180)'/>     
-          </motion.button>      
-        </motion.div>
-
+    <div id='about' className='h-screen bg-sky-300'>
+      <Navbar color='black' scrollAbout={scrollAbout} scrollPortfolio={scrollPortfolio} scrollTop = {scrollTop} scrollResume={scrollResume}/>
         <motion.h1 initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='text-end w-5/6 text-1xl md:text-3xl lg:text-4xl underline text-green-800 font-Shadows-Into-Light'>About Me</motion.h1>
         
         <div className='inline-flex flex-col h-fit-content'>
@@ -54,11 +50,6 @@ const Aboutme = ({scrollUp, scrollDown}) => {
               </Link>
             </motion.div>  
           </div>      
-          </motion.div>
-          <motion.div className='flex justify-center'>
-            <motion.button className='mt-64 lg:mt-44' onClick={() => scrollDown()} whileHover={{scale:1.1}}>
-              <IoIosArrowDown className='text-xl md:text-2xl lg:text-4xl text-zinc-800'/>
-            </motion.button>  
           </motion.div>
   </div>
   </div>

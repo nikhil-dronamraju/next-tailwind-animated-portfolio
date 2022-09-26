@@ -16,19 +16,22 @@ const Fullpage = () => (
       const scrollDown = () => {fullpageApi.moveSectionDown()}
       const scrollUp = () => {fullpageApi.moveSectionUp()}
       const scrollTop = () => {fullpageApi.moveTo(1)}
+      const scrollAbout = () => {fullpageApi.moveTo(2)}
+      const scrollPortfolio = () => {fullpageApi.moveTo(3)}
+      const scrollResume = () => {fullpageApi.moveTo(4)}
       return (
         <ReactFullpage.Wrapper>
           <div className="section">
-            <Home myFunction={scrollDown}/>
+          <Home scrollDown={scrollDown} scrollTop={scrollTop} scrollAbout={scrollAbout} scrollPortfolio={scrollPortfolio} scrollResume={scrollResume}/>
           </div>
           <div className="section">
-            <Aboutme scrollDown={scrollDown} scrollUp={scrollUp}/>
+          <Aboutme scrollUp={scrollUp} scrollTop={scrollTop} scrollAbout={scrollAbout} scrollPortfolio={scrollPortfolio} scrollResume={scrollResume}/>
           </div>
           <div className="section">
-            <Portfolio scrollDown={scrollDown} scrollUp={scrollUp}/>
+            <Portfolio scrollUp={scrollUp} scrollTop={scrollTop} scrollAbout={scrollAbout} scrollPortfolio={scrollPortfolio} scrollResume={scrollResume}/>
           </div>
           <div className="section">
-            <Resume scrollUp={scrollUp} scrollTop={scrollTop}/>
+            <Resume scrollUp={scrollUp} scrollTop={scrollTop} scrollAbout={scrollAbout} scrollPortfolio={scrollPortfolio} scrollResume={scrollResume}/>
           </div>
         </ReactFullpage.Wrapper>
       );

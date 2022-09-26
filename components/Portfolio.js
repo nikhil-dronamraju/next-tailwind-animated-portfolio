@@ -10,18 +10,12 @@ import hprcPortfolioPic from '/public/hprcWebsitePic.png'
 import hprcPublication from '/public/mypublication.png'
 import myPortfolio from '/public/myhomepage.png'
 import {AiFillGithub} from 'react-icons/ai';
-import {TbBrandHtml5, TbBrandCss3, TbBrandJavascript, 
-        TbTerminal2, TbBrandPython, TbBrandNextjs,
-        TbBrandVercel,TbBrandTailwind, TbBrandBootstrap, 
-        TbBrandFigma, TbBrandGit, TbBrandGithub, TbBrandSlack} from 'react-icons/tb'
-      
-import {SiRubyonrails, SiReact, SiFramer, SiJquery, SiNodedotjs, 
-        SiMongodb, SiPostgresql, SiPrisma, SiTrello} from 'react-icons/si'
 
 import Link from 'next/link'
 import {IoIosArrowDown} from 'react-icons/io'
+import Navbar from './Navbar';
 
-const Portfolio = ({scrollDown, scrollUp}) => {
+const Portfolio = ({scrollTop, scrollUp, scrollAbout, scrollPortfolio, scrollResume}) => {
 
   const settings = {
     dots: true,
@@ -34,11 +28,7 @@ const Portfolio = ({scrollDown, scrollUp}) => {
 
   return (
     <motion.div className='h-screen bg-purple-900'>
-        <motion.div className='flex'>
-          <motion.button onClick={() => {scrollUp()}} className='inline-flex ml-auto mr-auto w-fit text-xl md:text-2xl lg:text-4xl' whileHover={{scale:1.1}} whileTap={{scale:.9}}>
-              <IoIosArrowDown color='white' transform='rotate(180)'/>     
-          </motion.button>      
-        </motion.div>
+        <Navbar color='white' scrollAbout={scrollAbout} scrollPortfolio={scrollPortfolio} scrollTop = {scrollTop} scrollResume={scrollResume}/>
 
         <motion.h1 initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='text-end w-5/6 text-1xl md:text-3xl lg:text-4xl underline text-slate-50 font-Shadows-Into-Light'>Portfolio</motion.h1>
 
@@ -107,22 +97,7 @@ const Portfolio = ({scrollDown, scrollUp}) => {
             </motion.div>
             </Slider>
 
-          <motion.div id='iconscontainer' className='text-white font-Shadows-Into-Light mt-10'>
-            <motion.h2 className=' underline text-center' initial = {{opacity: 0}} whileInView = {{opacity: 1}}>Tech Stack: </motion.h2>
-            <motion.div className='flex justify-evenly'>
-              <TbBrandHtml5 size={30}/> <TbBrandCss3 size={30}/> <TbBrandJavascript size={30}/> 
-              <TbTerminal2 size={30}/> <TbBrandPython size={30}/> <TbBrandNextjs size={30}/>
-              <TbBrandVercel size={30}/> <TbBrandTailwind size={30}/> <TbBrandBootstrap size={30}/>
-              <TbBrandFigma size={30}/> <TbBrandGit size={30}/> <TbBrandGithub size={30}/> <TbBrandSlack size={30}/>
-              <SiRubyonrails size={30}/> <SiReact size={30}/> <SiFramer size={30}/> <SiJquery size={30}/> <SiNodedotjs size={30}/>
-              <SiMongodb size={30}/> <SiPostgresql size={30}/> <SiPrisma size={30}/> <SiTrello size={30}/>
-            </motion.div>
-            <motion.div className='flex justify-center'>
-            <motion.button classView='pt-24' onClick={() => {scrollDown()}} whileHover={() => {{scale:1.1}}}>
-              <IoIosArrowDown className='text-white text-xl md:text-2xl lg:text-4xl'/>
-            </motion.button>   
-          </motion.div> 
-          </motion.div>
+
         </motion.div>
   )
 }
