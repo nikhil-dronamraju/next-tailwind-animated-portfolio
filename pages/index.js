@@ -25,10 +25,10 @@ const Fullpage = () => (
           <Home scrollDown={scrollDown} scrollTop={scrollTop} scrollAbout={scrollAbout} scrollPortfolio={scrollPortfolio} scrollResume={scrollResume}/>
           </div>
           <div className="section">
-          <Aboutme scrollUp={scrollUp} scrollTop={scrollTop} scrollAbout={scrollAbout} scrollPortfolio={scrollPortfolio} scrollResume={scrollResume}/>
+          <Aboutme scrollUp={scrollUp} scrollDown = {scrollDown} scrollTop={scrollTop} scrollAbout={scrollAbout} scrollPortfolio={scrollPortfolio} scrollResume={scrollResume}/>
           </div>
           <div className="section">
-            <Portfolio scrollUp={scrollUp} scrollTop={scrollTop} scrollAbout={scrollAbout} scrollPortfolio={scrollPortfolio} scrollResume={scrollResume}/>
+            <Portfolio scrollUp={scrollUp} scrollDown={scrollDown} scrollTop={scrollTop} scrollAbout={scrollAbout} scrollPortfolio={scrollPortfolio} scrollResume={scrollResume}/>
           </div>
           <div className="section">
             <Resume scrollUp={scrollUp} scrollTop={scrollTop} scrollAbout={scrollAbout} scrollPortfolio={scrollPortfolio} scrollResume={scrollResume}/>

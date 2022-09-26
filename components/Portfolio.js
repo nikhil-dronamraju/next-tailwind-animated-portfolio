@@ -15,7 +15,7 @@ import Link from 'next/link'
 import {IoIosArrowDown} from 'react-icons/io'
 import Navbar from './Navbar';
 
-const Portfolio = ({scrollTop, scrollUp, scrollAbout, scrollPortfolio, scrollResume}) => {
+const Portfolio = ({scrollTop, scrollDown, scrollAbout, scrollPortfolio, scrollResume}) => {
 
   const settings = {
     dots: true,
@@ -27,12 +27,12 @@ const Portfolio = ({scrollTop, scrollUp, scrollAbout, scrollPortfolio, scrollRes
 
 
   return (
-    <motion.div className='h-screen bg-purple-900'>
+    <motion.div className='h-screen bg-sky-700'>
         <Navbar color='white' scrollAbout={scrollAbout} scrollPortfolio={scrollPortfolio} scrollTop = {scrollTop} scrollResume={scrollResume}/>
 
         <motion.h1 initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='text-end w-5/6 text-1xl md:text-3xl lg:text-4xl underline text-slate-50 font-Shadows-Into-Light'>Portfolio</motion.h1>
 
-        <Slider {...settings} id='slider' className='max-h-1/2 w-1/2 ml-auto mr-auto border '>
+        <Slider {...settings} id='slider' className='max-h-1/2 w-1/2 ml-auto mr-auto'>
             <motion.div className='flex justify-center' id='slide'>
                 <motion.h3 className='text-center underline text-slate-50 font-Shadows-Into-Light'>Supercomputing Dashboard</motion.h3>
                 <Image src={dashboardPic} alt="Dashboard pic" className='ml-auto mr-auto'/>
@@ -50,7 +50,7 @@ const Portfolio = ({scrollTop, scrollUp, scrollAbout, scrollPortfolio, scrollRes
 
             <motion.div id='slide'>
                 <motion.h3 className='text-center underline font-Shadows-Into-Light text-white' id='slidetitle'>HPRC Website</motion.h3>
-                <motion.div className='flex justify-center' id='slideimage' whileHover={{scale: 1.1}} whileTap={{scale:.9}}>
+                <motion.div className='flex justify-center' id='slideimage'>
                 <Image src={hprcPortfolioPic} alt="Website pic" />
                 </motion.div>
                 <br/>
@@ -61,7 +61,7 @@ const Portfolio = ({scrollTop, scrollUp, scrollAbout, scrollPortfolio, scrollRes
 
             <motion.div id='slide'>
             <motion.h3 className='text-center underline font-Shadows-Into-Light text-white' id='slidetitle'>12th Unmanned Team</motion.h3>
-                <motion.div id='slideimage' whileHover={{scale: 1.1}} whileTap={{scale:.9}}>
+                <motion.div id='slideimage'>
                 <Image src={unmanned} alt="12th unmanned pic" />
                 </motion.div>
                 <br/>
@@ -72,7 +72,7 @@ const Portfolio = ({scrollTop, scrollUp, scrollAbout, scrollPortfolio, scrollRes
 
             <motion.div id='slide'>
             <motion.h3 className='text-center underline font-Shadows-Into-Light text-white' id='slidetitle'>Portfolio Site</motion.h3>
-                <motion.div id='slideimage' whileHover={{scale: 1.1}} whileTap={{scale:.9}}>
+                <motion.div id='slideimage'>
                 <Image src={myPortfolio} alt="My portfolio pic" />
                 </motion.div>
                 <br/>
@@ -87,7 +87,7 @@ const Portfolio = ({scrollTop, scrollUp, scrollAbout, scrollPortfolio, scrollRes
             
             <motion.div id='slide'>
             <motion.h3 className='text-center underline font-Shadows-Into-Light text-white' id='slidetitle'>Publication: Cybersecurity...</motion.h3>
-                <motion.div id='slideimage' whileHover={{scale: 1.1}} whileTap={{scale:.98}}>
+                <motion.div id='slideimage'>
                 <Image src={hprcPublication} alt="Publication pic" className=' -blue' />
                 </motion.div>
                 <br/>
@@ -96,8 +96,11 @@ const Portfolio = ({scrollTop, scrollUp, scrollAbout, scrollPortfolio, scrollRes
                 </motion.div>
             </motion.div>
             </Slider>
-
-
+            <div className='flex h-fit'>
+                <motion.button onClick={() => {scrollDown()}} className='inline-flex w-fit ml-auto mr-auto mt-16 lg:mt-6 text-xl md:text-2xl lg:text-4xl' whileHover={{scale:1.1}} whileTap={{scale:.9}}>
+                    <IoIosArrowDown color='white'/>     
+                </motion.button>
+            </div>
         </motion.div>
   )
 }
