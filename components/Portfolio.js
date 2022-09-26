@@ -34,7 +34,7 @@ const Portfolio = ({scrollTop, scrollDown, scrollAbout, scrollPortfolio, scrollR
 
         <Slider {...settings} id='slider' className='max-h-1/2 w-1/2 ml-auto mr-auto'>
             <motion.div className='flex justify-center' id='slide'>
-                <motion.h3 className='text-center md:text-lg lg:text-3xl underline text-neutral-50 font-Shadows-Into-Light'>Supercomputing Dashboard</motion.h3>
+                <motion.h3 initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='text-center md:text-lg lg:text-3xl underline text-neutral-50 font-Shadows-Into-Light'>Supercomputing Dashboard</motion.h3>
                 <Image src={dashboardPic} alt="Dashboard pic" className='ml-auto mr-auto'/>
                 <br/>
                 <motion.div id='slideicons' className='flex justify-around text-neutral-50'>
@@ -49,7 +49,7 @@ const Portfolio = ({scrollTop, scrollDown, scrollAbout, scrollPortfolio, scrollR
             </motion.div>
 
             <motion.div id='slide'>
-                <motion.h3 className='text-center md:text-lg lg:text-3xl underline text-neutral-50 font-Shadows-Into-Light'>HPRC Website</motion.h3>
+                <motion.h3 initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='text-center md:text-lg lg:text-3xl underline text-neutral-50 font-Shadows-Into-Light'>HPRC Website</motion.h3>
                 <motion.div className='flex justify-center' id='slideimage'>
                 <Image src={hprcPortfolioPic} alt="Website pic" />
                 </motion.div>
@@ -60,7 +60,7 @@ const Portfolio = ({scrollTop, scrollDown, scrollAbout, scrollPortfolio, scrollR
             </motion.div>
 
             <motion.div id='slide'>
-            <motion.h3 className='text-center md:text-lg lg:text-3xl underline text-neutral-50 font-Shadows-Into-Light'>12th Unmanned Team</motion.h3>
+            <motion.h3 initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='text-center md:text-lg lg:text-3xl underline text-neutral-50 font-Shadows-Into-Light'>12th Unmanned Team</motion.h3>
                 <motion.div id='slideimage'>
                 <Image src={unmanned} alt="12th unmanned pic" />
                 </motion.div>
@@ -71,7 +71,7 @@ const Portfolio = ({scrollTop, scrollDown, scrollAbout, scrollPortfolio, scrollR
             </motion.div>
 
             <motion.div id='slide'>
-            <motion.h3 className='text-center md:text-lg lg:text-3xl underline text-neutral-50 font-Shadows-Into-Light'>Portfolio Site</motion.h3>
+            <motion.h3 initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='text-center md:text-lg lg:text-3xl underline text-neutral-50 font-Shadows-Into-Light'>Portfolio Site</motion.h3>
                 <motion.div id='slideimage'>
                 <Image src={myPortfolio} alt="My portfolio pic" />
                 </motion.div>
@@ -86,7 +86,7 @@ const Portfolio = ({scrollTop, scrollDown, scrollAbout, scrollPortfolio, scrollR
             </motion.div>
             
             <motion.div id='slide'>
-            <motion.h3 className='text-center md:text-lg lg:text-3xl underline text-neutral-50 font-Shadows-Into-Light'>Publication: Cybersecurity...</motion.h3>
+            <motion.h3 initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='text-center md:text-lg lg:text-3xl underline text-neutral-50 font-Shadows-Into-Light'>Publication: Cybersecurity...</motion.h3>
                 <motion.div id='slideimage'>
                 <Image src={hprcPublication} alt="Publication pic"/>
                 </motion.div>

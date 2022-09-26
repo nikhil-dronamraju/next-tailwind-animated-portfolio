@@ -16,7 +16,7 @@ const Aboutme = ({scrollTop, scrollAbout, scrollPortfolio, scrollResume, scrollD
         <motion.h1 initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='text-end w-5/6 text-1xl md:text-3xl lg:text-4xl underline text-black font-Shadows-Into-Light'>About Me</motion.h1>
         
         <div className='inline-flex flex-col h-fit-content'>
-        <motion.div id='aboutmebody' whileInView={{scale:1.1}} transition={{duration:1}} className = 'bg-zinc-300 shadow-2xl border border-black mt-4 md:mt-6 lg:mt-8 font-Shadows-Into-Light inline-flex w-5/6 m-auto'>
+        <motion.div id='aboutmebody' initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className = 'bg-zinc-300 shadow-2xl border border-black mt-4 md:mt-6 lg:mt-8 font-Shadows-Into-Light inline-flex w-5/6 m-auto'>
 
           <Image src={myPic} alt='cartoon Nikhil Dronamraju' className=' w-1/4 h-1/4 lg:w-1/4'/>
 
