@@ -42,7 +42,7 @@ const Portfolio = ({scrollDown, scrollUp}) => {
 
         <motion.h1 initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='text-end w-5/6 text-1xl md:text-3xl lg:text-4xl underline text-slate-50 font-Shadows-Into-Light'>Portfolio</motion.h1>
 
-        <Slider {...settings} id='slider' className=' max-h-fit w-1/2 ml-auto mr-auto  '>
+        <Slider {...settings} id='slider' className='max-h-1/2 w-1/2 ml-auto mr-auto border '>
             <motion.div className='flex justify-center' id='slide'>
                 <motion.h3 className='text-center underline text-slate-50 font-Shadows-Into-Light'>Supercomputing Dashboard</motion.h3>
                 <Image src={dashboardPic} alt="Dashboard pic" className='ml-auto mr-auto'/>
