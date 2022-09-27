@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-title-in-document-head */
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
@@ -8,7 +9,8 @@ export default function Document() {
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
-        <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Caveat&family=Montserrat:wght@300&family=Shadows+Into+Light&display=swap" rel="stylesheet"/>      
+        <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Caveat&family=Montserrat:wght@300&family=Shadows+Into+Light&display=swap" rel="stylesheet"/>
+        <title>Nikhil Dronamraju Portfolio</title>      
         </Head>
       <body>
         <Main />

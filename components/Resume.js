@@ -32,7 +32,7 @@ const Resume = ({scrollUp, scrollTop, scrollAbout, scrollPortfolio, scrollResume
               <SiMongodb className='text-xs md:text-xl lg:text-3xl'/> <SiPostgresql className='text-xs md:text-xl lg:text-3xl'/> <SiPrisma className='text-xs md:text-xl lg:text-3xl'/> <SiTrello className='text-xs md:text-xl'/>
             </motion.div> 
             </motion.div>
-            <motion.div whileHover={{scale:1.2}} transition = {{duration:2}} className='inline-flex w-fit'>
+            <motion.div whileHover={{scale:1.2}} transition = {{duration:1}} className='inline-flex w-fit'>
             <Image className='ml-auto mr-auto w-5/6' id='resumeImage' src= {resume} alt="NikhilResume"/>
             </motion.div>
         </motion.div>
