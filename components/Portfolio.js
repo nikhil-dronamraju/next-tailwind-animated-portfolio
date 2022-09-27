@@ -26,10 +26,10 @@ const Portfolio = ({scrollTop, scrollDown, scrollAbout, scrollPortfolio, scrollR
 
 
   return (
-    <motion.div className='h-screen bg-sky-700'>
+    <motion.div className='h-screen bg-teal-900 w-screen'>
         <Navbar color='neutral-50' scrollAbout={scrollAbout} scrollPortfolio={scrollPortfolio} scrollTop = {scrollTop} scrollResume={scrollResume}/>
 
-        <motion.h1 initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='text-end w-5/6 text-1xl md:text-3xl lg:text-4xl underline text-neutral-50 font-Shadows-Into-Light'>Portfolio</motion.h1>
+        <motion.h1 initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='text-start w-5/6 ml-auto mr-auto text-1xl md:text-3xl lg:text-4xl underline text-neutral-50 font-Shadows-Into-Light'>Portfolio</motion.h1>
 
         <Slider {...settings} id='slider' className='max-h-1/2 w-1/2 ml-auto mr-auto'>
             <motion.div className='flex justify-center' id='slide'>
