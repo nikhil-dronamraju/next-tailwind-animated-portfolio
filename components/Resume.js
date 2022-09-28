@@ -1,7 +1,7 @@
 import React from 'react'
 import {motion} from 'framer-motion'
 import Image from 'next/future/image';
-import resume from '/public/resume.png'
+import resume from '/public/resume-nikhil.png'
 import Navbar from './Navbar';
 import {TbBrandHtml5, TbBrandCss3, TbBrandJavascript, 
   TbTerminal2, TbBrandPython, TbBrandNextjs,
@@ -15,7 +15,7 @@ import {SiRubyonrails, SiReact, SiFramer, SiJquery, SiNodedotjs,
 
 const Resume = ({scrollUp, scrollTop, scrollAbout, scrollPortfolio, scrollResume}) => {
   return (
-    <motion.div id='resume' className='bg-red-700 h-screen'>
+    <motion.div id='resume' className='bg-red-700 h-screen w-screen'>
         <Navbar color='white' scrollAbout={scrollAbout} scrollPortfolio={scrollPortfolio} scrollTop = {scrollTop} scrollResume={scrollResume}/>     
         <motion.h1 initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='text-start w-5/6 ml-auto mr-auto text-1xl md:text-3xl lg:text-4xl underline text-white font-Shadows-Into-Light'>Resume/CV</motion.h1>
         
@@ -33,7 +33,7 @@ const Resume = ({scrollUp, scrollTop, scrollAbout, scrollPortfolio, scrollResume
             </motion.div> 
             </motion.div>
             <motion.div whileHover={{scale:1.2}} transition = {{duration:1}} className='inline-flex w-fit'>
-            <Image className='ml-auto mr-auto w-5/6' id='resumeImage' src= {resume} alt="NikhilResume"/>
+            <Image className='ml-auto mr-auto w-5/6' src= {resume} alt="NikhilResume"/>
             </motion.div>
         </motion.div>
         <motion.div className='flex' initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}}>
