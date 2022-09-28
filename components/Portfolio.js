@@ -76,7 +76,7 @@ const Portfolio = ({scrollTop, scrollDown, scrollAbout, scrollPortfolio, scrollR
                 </motion.div>
                 <br/>
                 <motion.div id='slideiconsportfolio' className='flex justify-center text-neutral-50'>
-                <Link href = "https://github.com/nikhil-dronamraju/nextjsportfolio" scroll={false} passHref={true}>
+                <Link href = "https://github.com/nikhil-dronamraju/next-tailwind-animated-portfolio" scroll={false} passHref={true}>
                     <motion.a whileHover={{scale: 1.1}} whileTap = {{scale: 0.9}} id='navLink'>                    
                     <AiFillGithub size={50}/>
                     </motion.a>
