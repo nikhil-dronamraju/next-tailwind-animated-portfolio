@@ -32,11 +32,11 @@ const Resume = ({scrollUp, scrollTop, scrollAbout, scrollPortfolio, scrollResume
               <SiMongodb className='text-xs md:text-xl lg:text-3xl'/> <SiPostgresql className='text-xs md:text-xl lg:text-3xl'/> <SiPrisma className='text-xs md:text-xl lg:text-3xl'/> <SiTrello className='text-xs md:text-xl'/>
             </motion.div> 
             </motion.div>
-            <motion.div whileHover={{scale:1.2}} transition = {{duration:1}} className='inline-flex w-fit'>
+            <motion.div whileHover={{scale:1.1}} transition = {{duration:1}} className='inline-flex w-fit relative bottom-1/4'>
             <Image className='ml-auto mr-auto w-5/6' src= {resume} alt="NikhilResume"/>
             </motion.div>
         </motion.div>
-        <motion.div className='flex' initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}}>
+        <motion.div className='relative bottom-5 flex items-start h-fit w-1/2 left-1/4' initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}}>
           <motion.button onClick={() => {scrollTop()}} className='inline-flex w-fit ml-auto mr-auto mt-16 md:mt-12 lg:mt-4 text-xl md:text-2xl lg:text-4xl' whileHover={{scale:1.1}} whileTap={{scale:.9}}>
             <IoIosArrowUp color='white'/>     
           </motion.button>

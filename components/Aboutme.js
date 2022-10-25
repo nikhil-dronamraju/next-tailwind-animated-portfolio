@@ -52,7 +52,7 @@ const Aboutme = ({scrollTop, scrollAbout, scrollPortfolio, scrollResume, scrollD
           </div>      
           </motion.div>
   </div>
-    <motion.div initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='flex'>
+    <motion.div initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='flex w-1/2 relative left-1/4'>
       <motion.button onClick={() => {scrollDown()}} className='inline-flex w-fit ml-auto mr-auto mt-16 md:mt-24 lg:mt-32 text-xl md:text-2xl lg:text-4xl' whileHover={{scale:1.1}} whileTap={{scale:.9}}>
         <IoIosArrowDown color='white'/>     
       </motion.button>

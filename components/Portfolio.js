@@ -26,7 +26,7 @@ const Portfolio = ({scrollTop, scrollDown, scrollAbout, scrollPortfolio, scrollR
 
 
   return (
-    <motion.div className='h-screen bg-teal-900 w-screen'>
+    <motion.div className='h-screen bg-teal-900'>
         <Navbar color='neutral-50' scrollAbout={scrollAbout} scrollPortfolio={scrollPortfolio} scrollTop = {scrollTop} scrollResume={scrollResume}/>
 
         <motion.h1 initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='text-start w-5/6 ml-auto mr-auto text-1xl md:text-3xl lg:text-4xl underline text-neutral-50 font-Shadows-Into-Light'>Portfolio</motion.h1>
@@ -95,7 +95,7 @@ const Portfolio = ({scrollTop, scrollDown, scrollAbout, scrollPortfolio, scrollR
                 </motion.div>
             </motion.div>
             </Slider>
-            <motion.div initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='flex'>
+            <motion.div initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='flex w-1/2 relative left-1/4'>
                 <motion.button onClick={() => {scrollDown()}} className='inline-flex w-fit ml-auto mr-auto mt-16 md:mt-24 lg:mt-0 text-xl md:text-2xl lg:text-4xl' whileHover={{scale:1.1}} whileTap={{scale:.9}}>
                     <IoIosArrowDown color='white'/>     
                 </motion.button>
