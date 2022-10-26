@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 import Image from 'next/future/image'
-import myPic from '/public/cartoonIcon.JPG'
+import myPic from '/public/profile.png'
 import {AiFillYoutube} from 'react-icons/ai'
 import {AiFillLinkedin} from 'react-icons/ai'
 import {motion} from 'framer-motion'
@@ -18,7 +18,7 @@ const Aboutme = ({scrollTop, scrollAbout, scrollPortfolio, scrollResume, scrollD
         <div className='inline-flex flex-col h-fit-content'>
         <motion.div id='aboutmebody' initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className = 'bg-zinc-700 shadow-2xl border border-white mt-4 md:mt-6 lg:mt-8 font-Shadows-Into-Light text-white inline-flex w-5/6 m-auto'>
 
-          <Image src={myPic} alt='cartoon Nikhil Dronamraju' className='border border-white w-1/4 h-1/4 lg:w-1/4'/>
+          <Image src={myPic} alt='cartoon Nikhil Dronamraju' className='border inline-flex border-white w-1/4 h-1/4 lg:w-1/4'/>
 
           <div className='flex flex-col justify-evenly '>
           <motion.div className='lg:mt-4 w-5/6 h-1/2 ml-auto mr-auto text-center text-[12px] md:text-[15px] lg:text-[18px]'>

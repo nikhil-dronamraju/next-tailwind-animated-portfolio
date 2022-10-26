@@ -33,7 +33,7 @@ const Resume = ({scrollUp, scrollTop, scrollAbout, scrollPortfolio, scrollResume
             </motion.div> 
             </motion.div>
             <motion.div whileHover={{scale:1.1}} transition = {{duration:1}} className='inline-flex w-fit relative bottom-1/4'>
-            <Image className='ml-auto mr-auto w-5/6' src= {resume} alt="NikhilResume"/>
+              <Image className='ml-auto mr-auto w-5/6' src= {resume} alt="NikhilResume"/>
             </motion.div>
         </motion.div>
         <motion.div className='relative bottom-5 flex items-start h-fit w-1/2 left-1/4' initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}}>
