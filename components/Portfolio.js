@@ -9,6 +9,7 @@ import unmanned from '/public/unmannedWebsitePic.png'
 import hprcPortfolioPic from '/public/hprcWebsitePic.png'
 import hprcPublication from '/public/mypublication.png'
 import myPortfolio from '/public/myhomepage.png'
+import DoItAll from '/public/DoItAll.png'
 import {AiFillGithub} from 'react-icons/ai';
 
 import Link from 'next/link'
@@ -92,6 +93,21 @@ const Portfolio = ({scrollTop, scrollDown, scrollAbout, scrollPortfolio, scrollR
                 <br/>
                 <motion.div id='slideiconsportfolio' className='ml-auto mr-auto w-1/2 h-1/2 text-neutral-50 font-Shadows-Into-Light'>
                 <motion.div>Currently being reviewed {'\n'}for BPHTE '22 Research Conference</motion.div>
+                </motion.div>
+            </motion.div>
+            
+            <motion.div id='slide'>
+            <motion.h3 initial = {{opacity: 0}} whileInView={{opacity:1, scale:1.1}} transition = {{duration:3}} className='text-center md:text-lg lg:text-3xl underline text-neutral-50 font-Shadows-Into-Light'> DoItAll (GraphQL, Rails, React) </motion.h3>
+                <motion.div id='slideimage'>
+                <Image src={DoItAll} alt="My portfolio pic" />
+                </motion.div>
+                <br/>
+                <motion.div id='slideiconsportfolio' className='flex justify-center text-neutral-50'>
+                <Link href = "https://github.com/nikhil-dronamraju/graphql-on-rails" scroll={false} passHref={true}>
+                    <motion.a whileHover={{scale: 1.1}} whileTap = {{scale: 0.9}} id='navLink'>                    
+                    <AiFillGithub size={50}/>
+                    </motion.a>
+                </Link>
                 </motion.div>
             </motion.div>
             </Slider>
